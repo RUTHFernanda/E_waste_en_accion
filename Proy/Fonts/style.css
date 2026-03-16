@@ -1,0 +1,10 @@
+p {
+    /* Color rojo oscuro */
+    color: #900; 
+    
+    /* Aplica la fuente importada de Google Fonts, con 'cursive' como respaldo */
+    font-family: 'Lobster', cursive; 
+    
+    /* Tamaño de la fuente */
+    font-size: 25px;
+}
