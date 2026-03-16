@@ -1,0 +1,826 @@
+/* Base Reset and Global Styles */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+:root {
+
+    --color-primary: #10b981; /* Verde esmeralda */
+
+    --color-secondary: #3b82f6; /* Azul brillante */
+
+    --color-dark: #1e293b; /* Azul oscuro/negro */
+
+    --color-light: #f8fafc; /* Blanco muy claro */
+
+    --color-text: #334155; /* Gris pizarra */
+
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: var(--font-family);
+
+    line-height: 1.6;
+
+    color: var(--color-text);
+
+    background-color: var(--color-light);
+
+}
+
+
+
+.container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+
+
+section {
+
+    padding: 5rem 0;
+
+    text-align: center;
+
+}
+
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+}
+
+
+
+h2 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 3rem;
+
+    color: var(--color-dark);
+
+    position: relative;
+
+    padding-bottom: 1rem;
+
+}
+
+
+
+h2:after {
+
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100px;
+
+    height: 4px;
+
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+
+    border-radius: 2px;
+
+}
+
+
+
+a {
+
+    color: var(--color-primary);
+
+    text-decoration: none;
+
+    transition: color 0.3s;
+
+}
+
+
+
+a:hover {
+
+    color: var(--color-secondary);
+
+}
+
+
+
+/* Header and Navigation */
+
+header {
+
+    background-color: var(--color-dark);
+
+    color: var(--color-light);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 1rem 2rem;
+
+}
+
+
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.logo-text {
+
+    margin-left: 10px;
+
+    text-align: left;
+
+}
+
+
+
+.logo-title {
+
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    color: var(--color-primary);
+
+}
+
+
+
+.logo-subtitle {
+
+    font-size: 0.7rem;
+
+    font-weight: 400;
+
+    color: var(--color-light);
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-top: -3px;
+
+}
+
+
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+}
+
+
+
+.nav-links li {
+
+    margin-left: 25px;
+
+}
+
+
+
+.nav-links a {
+
+    color: var(--color-light);
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    font-size: 0.9rem;
+
+    padding: 5px 0;
+
+    border-bottom: 2px solid transparent;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+}
+
+
+
+/* Hero Section */
+
+.hero {
+
+    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+
+    padding: 10rem 2rem 15rem;
+
+    color: var(--color-dark);
+
+    position: relative;
+
+    overflow: hidden; /* Para contener las montañas */
+
+}
+
+
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--color-secondary);
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.hero .subtitle {
+
+    font-size: 1.8rem;
+
+    font-weight: 300;
+
+    margin-bottom: 2rem;
+
+    color: var(--color-text);
+
+}
+
+
+
+.hero p {
+
+    max-width: 700px;
+
+    margin: 0 auto 3rem;
+
+    font-size: 1.1rem;
+
+}
+
+
+
+/* Mountain/Wave Styling for Hero */
+
+.mountains {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100px; /* Altura total del efecto */
+
+    overflow: hidden;
+
+}
+
+
+
+.mountain {
+
+    position: absolute;
+
+    bottom: -10px;
+
+    width: 150%;
+
+    height: 100px;
+
+    border-radius: 50% 50% 0 0;
+
+}
+
+
+
+.mountain1 {
+
+    left: -20%;
+
+    background-color: #93c5fd; /* Azul más claro */
+
+    height: 120px;
+
+    animation: wave 20s linear infinite;
+
+}
+
+
+
+.mountain2 {
+
+    left: -5%;
+
+    background-color: #60a5fa; /* Azul medio */
+
+    height: 100px;
+
+    animation: wave 15s linear infinite reverse;
+
+}
+
+
+
+.mountain3 {
+
+    left: 10%;
+
+    background-color: #3b82f6; /* Azul principal */
+
+    height: 80px;
+
+    animation: wave 25s linear infinite;
+
+}
+
+.mountain4 {
+
+    left: -30%;
+
+    background-color: #bfdbfe; /* Azul claro */
+
+    height: 110px;
+
+    animation: wave 18s linear infinite reverse;
+
+}
+
+.mountain5 {
+
+    left: 20%;
+
+    background-color: #bfdbfe; /* Azul claro */
+
+    height: 90px;
+
+    animation: wave 22s linear infinite;
+
+}
+
+
+
+@keyframes wave {
+
+    0% { transform: translateX(0); }
+
+    100% { transform: translateX(-50%); }
+
+}
+
+
+
+
+
+/* ************************************** */
+
+/* NUEVOS ESTILOS PARA LA SECCIÓN E-WASTE */
+
+/* ************************************** */
+
+
+
+#e-waste-info {
+
+    /* Fondo para la nueva sección */
+
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+
+}
+
+
+
+.intro-text {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 3rem;
+
+}
+
+
+
+.intro-text p {
+
+    font-size: 1.3rem;
+
+    color: #1e293b;
+
+    line-height: 1.8;
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+.highlight-blue {
+
+    color: #3b82f6;
+
+    font-weight: 700;
+
+}
+
+
+
+.highlight-green {
+
+    color: #10b981;
+
+    font-weight: 600;
+
+}
+
+
+
+/* E-Waste Examples */
+
+.ewaste-examples {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+
+}
+
+
+
+.example-item {
+
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all 0.4s;
+
+    border: 3px solid transparent;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+.example-item:hover {
+
+    transform: scale(1.05); /* Reduje un poco la escala para que no choque con otros elementos */
+
+    border-color: #10b981;
+
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
+
+    z-index: 10;
+
+}
+
+
+
+.example-icon {
+
+    font-size: 4rem;
+
+    margin-bottom: 1rem;
+
+    animation: bounce 2s infinite;
+
+}
+
+
+
+@keyframes bounce {
+
+    0%, 100% { transform: translateY(0); }
+
+    50% { transform: translateY(-10px); }
+
+}
+
+
+
+.example-item h4 {
+
+    color: #1e293b;
+
+    margin-bottom: 0.5rem;
+
+    font-size: 1.1rem;
+
+}
+
+
+
+.example-item p {
+
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+}
+
+
+
+/* Info box */
+
+.info-box {
+
+    max-width: 800px;
+
+    margin: 3rem auto 0;
+
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #3b82f6;
+
+    text-align: center;
+
+}
+
+.info-box p {
+
+    font-size: 1.1rem;
+
+    color: #1e3a8a;
+
+    margin: 0;
+
+}
+
+/* Enlaces Gubernamentales */
+.gov-links {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #d1fae5 100%);
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    margin: 3rem 0;
+    border: 3px solid #3b82f6;
+}
+
+.gov-links h3 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #1e293b;
+    font-size: 2rem;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gov-link {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.4s;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+}
+
+.gov-link:hover {
+    transform: translateX(15px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    border-color: #10b981;
+}
+
+.gov-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #000000 0%, #1e293b 100%);
+    color: white;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981, #3b82f6);
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    color: #10b981;
+    font-size: 1.3rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.8rem;
+    color: #cbd5e1;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    transform: translateY(-5px) rotate(360deg);
+}
+
+/* Animations (Mantenidas aquí ya que son puramente estéticas/de presentación) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .logo-title {
+        font-size: 1.2rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
